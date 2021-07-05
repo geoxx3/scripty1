@@ -2,7 +2,6 @@
   "name": "a2",
   "version": "1.0.0",
   "main": "index.js",
-  
   "keywords": [],
   "scripts": {
     "start": "node index.js"
