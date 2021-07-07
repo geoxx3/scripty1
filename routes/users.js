@@ -28,6 +28,13 @@ router.post('/register', catchAsync(async (req, res, next) =>{
 router.get('/login', (req, res) => {
     res.render('login')
 })
+router.get('/terms', (req, res) => {
+  res.render('terms')
+})
+
+router.get('/privacy', (req, res) => {
+  res.render('privacy')
+})
 
 router.post('/login', passport.authenticate('local',
      {failureFlash: true, failureRedirect: '/login' }),
