@@ -1,71 +1,42 @@
 <% layout('layouts/reg') %> 
 
-<div class="content">
-    <div class="container">
-        
-      <div class="row">
-        <div class="col-md-6">
-          <img src="/assets/img/bg_1.jpg" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-md-6 contents">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-              <div class="mb-4">
-              <h3>Sign Up</h3>
-              <p class="mb-4">Welcome</p>
-            </div>
-            <form action="/register" method="post">
-               <div class="form-group first">
-                <label for="username">Username</label>
-                <input type="text" class="form-control"name="username" id="username">
- 
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" name ="email" id="email">
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="row">
+      <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+          <div class="card shadow">
+              <img src="https://images.unsplash.com/photo-1571863533956-01c88e79957e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"
+                  alt="" class="card-img-top" />
+              <div class="card-body">
+                  <h5 class="card-title">Register</h5>
+                  <form action="/register" method="POST" class="validated-form" novalidate>
+                      <div class="mb-3">
+                          <label class="form-label" for="username">Username</label>
+                          <input class="form-control" type="text" id="username" name="username" required autofocus>
+                          <div class="valid-feedback">
+                              Looks good!
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label" for="email">Email</label>
+                          <input class="form-control" type="email" id="email" name="email" required>
+                          <div class="valid-feedback">
+                              Looks good!
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label" for="password">Password</label>
+                          <input class="form-control" type="password" id="password" name="password" required>
+                          <div class="valid-feedback">
+                              Looks good!
+                          </div>
+                      </div>
+                      <button class="btn btn-success btn-block">Register</button>
+                      <h5>Have an Account?</h5>
+                      <a href="/login" > Log in now</a>   
+                  </form>
 
               </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" id="password">
-                
-              </div>
-              <!--  <div class="form-group last mb-4">
-                <label for="re-password">Re-type Password</label>
-                <input type="password" class="form-control" id="re-password"> 
-                
-              </div> -->
-              
-              <div class="d-flex mb-5 align-items-center">
-                <label class="control control--checkbox mb-0"><span class="caption">Creating an account means you're okay with our <a href="/terms">Terms and Conditions</a> and our <a href="privacy">Privacy Policy</a>.</span>
-                  <input type="checkbox" checked="checked"/>
-                  <div class="control__indicator"></div>
-                </label>
-              </div>
-
-              <input type="submit" value="Register" class="btn btn-block btn-primary">
-              <h3>Have an Account?</h3>
-              <a href="/login" > Log in now</a>
-
-              <span class="d-block text-left my-4 text-muted">&mdash; or register with &mdash;</span>
-              
-              <div class="social-login">
-                <a href="#" class="facebook">
-                  <span class="icon-facebook mr-3"></span> 
-                </a>
-                <a href="#" class="twitter">
-                  <span class="icon-twitter mr-3"></span> 
-                </a>
-                <a href="#" class="google">
-                  <span class="icon-google mr-3"></span> 
-                </a>
-              </div>
-            </form>
-            </div>
           </div>
-          
-        </div>
-        
       </div>
-    </div>
   </div>
+</div>
